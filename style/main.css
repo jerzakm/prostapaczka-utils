@@ -1,0 +1,16 @@
+body {
+    background: #CCC;
+    margin: 50px;
+}
+
+.input-group-prepend{
+    margin-left: 10px;
+}
+
+#btn-add-new {
+    margin-left: 10px;
+}
+
+.card {
+    margin-top: 30px;
+}

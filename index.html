@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>PP.narzędzia - generator ciągu znaków do kompletu paczek</title>
+  <link rel="stylesheet" href="style/bootstrap.min.css">
+  <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+  <div class="card">
+    <h5 class="card-header">Lista paczek</h5>
+    <div class="card-body">
+      <p class="card-text">Wpisz dane i dodaj nową paczkę do kompletu:</p>
+      <div id="new-package">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Ilość</span>
+          </div>
+          <input type="number" class="form-control" min="1" id="new-qt" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" required>
+
+            <div class="input-group-prepend">
+                <span class="input-group-text">Waga</span>
+              </div>
+              <input type="number" class="form-control" aria-label="Sizing example input" id="new-w"
+                aria-describedby="inputGroup-sizing-default" required>
+
+          <div class="input-group-prepend">
+            <span class="input-group-text">Dł.</span>
+          </div>
+          <input type="number" class="form-control" aria-label="Sizing example input" id="new-x"
+            aria-describedby="inputGroup-sizing-default" required>
+
+          <div class="input-group-prepend">
+            <span class="input-group-text">Szer.</span>
+          </div>
+          <input type="number" class="form-control" aria-label="Sizing example input" id="new-y"
+            aria-describedby="inputGroup-sizing-default" required>
+
+          <div class="input-group-prepend">
+            <span class="input-group-text">Wys.</span>
+          </div>
+          <input type="number" class="form-control" aria-label="Sizing example input" id="new-z"
+            aria-describedby="inputGroup-sizing-default" required>
+
+          <div class="input-group-prepend">
+            <span class="input-group-text">Niest.</span>
+          </div>
+          <div class="input-group-text">
+              <input type="checkbox" aria-label="Checkbox for following text input" id="new-nst">
+            </div>
+            <button type="button" class="btn btn-success" id="btn-add-new">Dodaj</button>
+      </div>
+    </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Ilość</th>
+            <th scope="col">Waga</th>
+            <th scope="col">Szerokość</th>
+            <th scope="col">Długość</th>
+            <th scope="col">Wysokość</th>
+            <th scope="col">Niestandard</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="package-container">
+
+        </tbody>
+      </table>
+  </div>
+</div>
+    <div class="card">
+      <h5 class="card-header">Wynik do skopiowania</h5>
+      <div class="card-body">
+        <p class="card-text" id="result-container"></p>
+      </div>
+    </div>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+    require('./handler.js')
+  </script>
+</body>
+
+</html>
